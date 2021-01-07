@@ -1,0 +1,10 @@
+__pycache__/
+.vscode/
+data/*
+!data/PLACEHOLDER
+models/*
+!models/PLACEHOLDER
+models_mask/*
+!models_mask/PLACEHOLDER
+test_results/*
+log_results/*
