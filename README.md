@@ -43,7 +43,7 @@ The pretrained models that we released are the final version (after the lighting
 
 You can download the pretrained models from: 
 
-[Models](http://share.msraig.info/DeferredNeuralLighting/models.zip) [Models_mask](http://share.msraig.info/DeferredNeuralLighting/models_mask.zip)
+[Models](https://igpublicshare.z20.web.core.windows.net/DeferredNeuralLighting/models.zip) [Models_mask](https://igpublicshare.z20.web.core.windows.net/DeferredNeuralLighting/models_mask.zip)
 
 
 ## Usage
