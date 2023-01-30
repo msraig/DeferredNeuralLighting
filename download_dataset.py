@@ -54,14 +54,14 @@ def download_file(url, dst_path):
 
 if __name__ == '__main__':
     if args.mode == 'test':
-        test_url_template = 'http://share.msraig.info/DeferredNeuralLighting/data/%s/Test.zip'
+        test_url_template = 'https://igpublicshare.z20.web.core.windows.net/DeferredNeuralLighting/data/%s/Test.zip'
         url = test_url_template % args.scene
         download_file(url, args.output_path)
 
     elif args.mode == 'train':
         args.output_path = os.path.join(args.output_path, 'Train/PL')
         if args.scene in ['tree', 'pig', 'sphere']:
-            train_url_synthetic_template = 'http://share.msraig.info/DeferredNeuralLighting/data/%s/Train/PL/Cluster_%d/Cluster_%d_%d.tfrecords'
+            train_url_synthetic_template = 'https://igpublicshare.z20.web.core.windows.net/DeferredNeuralLighting/data/%s/Train/PL/Cluster_%d/Cluster_%d_%d.tfrecords'
             
             for cluster_idx in args.cluster_indices:
                 download_file(train_url_synthetic_template % (args.scene, cluster_idx, cluster_idx, 0), os.path.join(args.output_path, 'Cluster_%d' % cluster_idx))
@@ -69,9 +69,9 @@ if __name__ == '__main__':
                     download_file(train_url_synthetic_template % (args.scene, cluster_idx, cluster_idx, 1), os.path.join(args.output_path, 'Cluster_%d' % cluster_idx))
         else:
             if args.scene == 'furscene':
-                train_url_real_template = 'http://share.msraig.info/DeferredNeuralLighting/data/%s/Train/PL/Cluster_%d/Cluster_%d_0seq_%d.tfrecords'
+                train_url_real_template = 'https://igpublicshare.z20.web.core.windows.net/DeferredNeuralLighting/data/%s/Train/PL/Cluster_%d/Cluster_%d_0seq_%d.tfrecords'
             else:
-                train_url_real_template = 'http://share.msraig.info/DeferredNeuralLighting/data/%s/Train/PL/Cluster_%d/Cluster_%d_0seq%d.tfrecords'
+                train_url_real_template = 'https://igpublicshare.z20.web.core.windows.net/DeferredNeuralLighting/data/%s/Train/PL/Cluster_%d/Cluster_%d_0seq%d.tfrecords'
 
             parts = 3 if args.scene == 'pixiu' else 6
 
